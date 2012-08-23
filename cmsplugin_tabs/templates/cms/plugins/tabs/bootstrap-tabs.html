@@ -1,0 +1,12 @@
+{% load sekizai_tags %}
+{% include "includes/bootstrap_tabs.html" %}
+{% addtoblock "js" %}
+    <script type="text/javascript">
+        $(function(){$("#tab-{{ tabheader_instance.id }} a:first").tab('show')});
+    </script>
+{% endaddtoblock %}
+<ul class="nav nav-tabs" id="tab-{{ tabheader_instance.id }}">
+    {% for title in tabheader_instance.tabtitle_set.all %}
+        <li><a href="#tab-{{ tabheader_instance.id }}-{{ forloop.counter }}" data-toggle="tab">{{ title.title }}</a></li>
+    {% endfor %}
+</ul>

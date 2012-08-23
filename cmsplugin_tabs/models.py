@@ -5,7 +5,7 @@ from cmsplugin_tabs import utils
 TEMPLATE_CHOICES = utils.autodiscover_templates()
 
 class TabHeaderPlugin(CMSPlugin):
-    template = models.CharField()
+    template = models.CharField(max_length=128, choices=TEMPLATE_CHOICES)
     tab_count = models.IntegerField()
 
 class TabTitle(models.Model):
