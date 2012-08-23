@@ -48,10 +48,12 @@ def autodiscover_templates():
                 dirs_to_scan.append(dir)
 
     for dir in dirs_to_scan:
-        found = glob.glob(os.path.join(dir, 'cms/plugins/tabs/*.html'))
+        dir_glob = 'cms/plugins/tabs'
+        found = glob.glob(os.path.join(dir, '{}/*.html'.format(dir_glob)))
         for file in found:
             dir, file = os.path.split(file)
-            key, value = os.path.join(dir.split('/')[-1], file), file
+            dir_count = len(dir_glob.split("/"))
+            key, value = os.path.join(*dir.split('/')[-dir_count:] + [file]), file
             f = False
             for _, template in templates:
                 if template == file:
