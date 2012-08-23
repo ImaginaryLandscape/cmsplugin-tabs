@@ -31,6 +31,9 @@ Installation
 
 3. Run ``syncdb`` or ``migrate cmsplugin_tabs`` (if you use South).
 
+4. Add CMS_PLUGIN_PROCESSORS = [ 'cmsplugin_tabs.plugin_processors.tabs_plugin_processor' ]
+   to your settings file.
+
 5. Very simple template is included with the project. It's compatible with
    twitter-bootstrap's tabs
 
