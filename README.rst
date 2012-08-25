@@ -60,3 +60,11 @@ Also set up an according number of titles for the tabs.
 
 Each one of the next ``n`` plugins you insert in the placeholder will be one of
 the tabs' contents.
+
+Template context variables
+--------------------------
+The header plugin instance lives in a variable called `wrapper`. The wrapped
+plugins' already rendered content lives in a list called `plugins`.
+
+Take a look at `cmsplugin_tabs/templates/cms/plugins/tabs/bootstrap-tabs.html
+for an example.
