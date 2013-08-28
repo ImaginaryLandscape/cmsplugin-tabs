@@ -1,0 +1,15 @@
+<ul>
+  {% for title in wrapper.tabtitle_set.all %}
+    <li><a href="#tab-{{ wrapper.id }}-{{ forloop.counter }}" data-toggle="tab">{{ title.title }}</a></li>
+  {% endfor %}
+</ul>
+
+{% for plugin in plugins %}
+<div id="tab-{{ wrapper.id }}-{{ forloop.counter }}">
+  <div class="insidetab">
+    <div class="tablists">
+      {{ plugin }}
+    </div>
+  </div>
+</div>
+{% endfor %}

@@ -2,6 +2,13 @@
 DjangoCMS tabs plugin
 =====================
 
+Changes in the Imaginary Landscape Fork
+---------------------------------------
+
+1. In django-cms 2.4, tab titles weren't copying upon publish. We added a copy_relations 
+method as discussed here: 
+http://docs.django-cms.org/en/2.4.0/extending_cms/custom_plugins.html#handling-relations
+
 Features
 --------
 
