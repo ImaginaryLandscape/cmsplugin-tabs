@@ -49,7 +49,7 @@ def autodiscover_templates():
 
     for dir in dirs_to_scan:
         dir_glob = 'cms/plugins/tabs'
-        found = glob.glob(os.path.join(dir, '{}/*.html'.format(dir_glob)))
+        found = glob.glob(os.path.join(dir, '%s/*.html' % (dir_glob)))
         for file in found:
             dir, file = os.path.split(file)
             dir_count = len(dir_glob.split("/"))

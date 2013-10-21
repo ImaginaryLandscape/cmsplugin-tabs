@@ -17,7 +17,7 @@ class TabHeaderPlugin(CMSPlugin):
             associated_item.save()
 
     def __unicode__(self):
-        return u"{}".format(self.tab_count)
+        return u"%s" % (self.tab_count)
 
 class TabTitle(models.Model):
     title = models.CharField(max_length=64)
