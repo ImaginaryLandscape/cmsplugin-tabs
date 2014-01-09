@@ -21,4 +21,5 @@ class TabHeaderPlugin(CMSPlugin):
 
 class TabTitle(models.Model):
     title = models.CharField(max_length=64)
+    order = models.PositiveIntegerField(blank=True, null=True)
     tab_header = models.ForeignKey(TabHeaderPlugin)
